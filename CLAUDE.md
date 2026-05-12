@@ -23,6 +23,21 @@ streamlit run app.py --browser.gatherUsageStats false
 streamlit run app.py --server.headless true --browser.gatherUsageStats false
 ```
 
+## GitHub Repository
+
+The project is hosted at **https://github.com/lucianartlima/dashboard-acoes-b3**.
+
+A Claude Code Stop hook automatically commits and pushes all changes to GitHub at the end of every session. The hook script is at `.claude/auto-push.sh`.
+
+To push manually at any time:
+```powershell
+git add -A
+git commit -m "your message"
+git push
+```
+
+`gh` CLI is installed via Scoop at `$env:USERPROFILE\scoop\shims\gh`. Git operations use HTTPS with the stored token.
+
 ## Architecture
 
 The app is a Streamlit dashboard with three layers:

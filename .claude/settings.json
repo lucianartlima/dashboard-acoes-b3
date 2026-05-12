@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "$env:Path += \";$env:USERPROFILE\\scoop\\shims\"; Set-Location 'C:\\Users\\SAMSUNG\\Downloads\\ProjetoClaudeCode'; $s = git status --porcelain 2>&1; if ($s) { $ts = Get-Date -Format 'yyyy-MM-dd HH:mm'; git add -A; git commit -m \"Auto-save: $ts\"; git push }",
+            "statusMessage": "Salvando alterações no GitHub...",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
